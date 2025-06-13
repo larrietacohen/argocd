@@ -1,0 +1,9 @@
+replicaCount: 3
+
+app:
+  label: nginx
+
+container:
+  name: nginx
+  image: nginx:1.14.2
+  port: 80
