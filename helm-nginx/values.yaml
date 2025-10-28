@@ -2,6 +2,7 @@ replicaCount: 1
 
 app:
   label: nginx
+  switch: offline
 
 container:
   name: nginx
