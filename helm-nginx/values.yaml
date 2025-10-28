@@ -3,7 +3,7 @@ replicaCount: 3
 app:
   label: nginx
   switch: offline
-
+  holitas: reload
 container:
   name: nginx
   image: httpd:alpine3.22
