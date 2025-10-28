@@ -1,7 +1,7 @@
 replicaCount: 3
 
 app:
-  label: nginx
+  label: nginx-revert
 
 container:
   name: nginx
