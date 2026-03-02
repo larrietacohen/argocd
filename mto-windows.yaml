@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: proyecto-demo
+  namespace: argocd
+spec:
+  description: Proyecto con ventana de mantenimiento
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: default
+    server: https://kubernetes.default.svc
+
+  syncWindows:
+  - kind: deny
+    schedule: "0 2 * * *"
+    duration: 10m
+    applications:
+    - '*'
+    manualSync: true
